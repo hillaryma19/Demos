@@ -15,6 +15,12 @@
 	f.age = 18;
 	console.log(f.num);
 
+	function Fn(){}
+	Fn.prototype.num = 123;
+	var f = new Fn();
+	f.age = 18;
+	console.log(f.num);
+
 	function Fn1(name){
 		this.name = name;
 		this.sayHello = function(){
