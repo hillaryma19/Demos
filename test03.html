@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	function Fn1(name){
+		this.name = name;
+		this.sayHello = function(){
+			console.log('Hi, this is sayHello');
+		}
+	}
+	var p1 = new Fn1('Tom');
+	var p2 = new Fn1('Bill');
+	console.log(p1);
+	console.log(p2); 
+	console.log(p1.sayHello === p2.sayHello);//false
+
+
+	function Fn2(name){
+		this.name = name;
+	}
+	Fn2.prototype.sayHello = function(){
+		console.log('hello, how are you doing ');
+	}
+	var pp1 = new Fn2();
+	var pp2 = new Fn2();
+	console.log(pp1.sayHello === pp2.sayHello);//true
+</script>
