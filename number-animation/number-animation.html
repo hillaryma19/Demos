@@ -68,63 +68,63 @@
     	var $moreNum = $("#js-more-nums"),
 			$allNum = $("#cur_num");
 		//交易笔数数字效果展示
-		function show_num(n) {
-			var it = $moreNum.find("em");
-			var len = String(n).length;
+	function show_num(n) {
+		var it = $moreNum.find("em");
+		var len = String(n).length;
 
-			for(var i = 0; i < len; i++) {
-				if(it.length <= i) {
-					$moreNum.append("<em></em>");
-				}
-				var num = String(n).charAt(i);
-				var y = - (parseInt(num) * 25);
-				var obj = $moreNum.find("em").eq(i);
-				//console.log(String(y));
-				obj.animate({
-					backgroundPositionY: String(y) + 'px'
-				}, 'slow', 'swing', function() {});
+		for(var i = 0; i < len; i++) {
+			if(it.length <= i) {
+				$moreNum.append("<em></em>");
 			}
-		};
-		//小屏滚动
-		
-		window.onload = function(){
-			var m = 6,
-				winHeight = $(window).height(), //窗口的高度
-				boxHeight = $('.more').offset().top - ($(document).scrollTop()); // 盒子距离窗口顶部的距离
-
-			/*
-			 * 成交笔数旋转的函数
-			 */
-			function rollFun() {
-				var time1;
-				time1 = setInterval(function() {
-					m --;
-					if(m > 0) {
-						sNum = m % 2 ? $allNum.val() / m : $allNum.val() * m;
-						show_num(parseInt(sNum));
-					} else {
-						//console.log('ok+'+$allNum.val());
-						show_num(parseInt($allNum.val()));
-						clearInterval(time1)
-					}
-
-				}, 100);
-			};
-
-			if(boxHeight > winHeight) {
-				// 盒子未出現在第一屏的時候
-				window.onscroll = function() {
-					// 当前元素是否出现在屏幕中（浏览器高度 + 滚动条滚动的高度 - 盒子距离浏览器的高度）
-					var scrollTop = $('#js-more-nums').offset().top,
-						a = (winHeight + $(document).scrollTop()) - scrollTop;
-					//console.log(a);
-					if(a > 0){
-						rollFun();
-					}
-				}
-			} else {
-				rollFun();
-			}
+			var num = String(n).charAt(i);
+			var y = - (parseInt(num) * 25);
+			var obj = $moreNum.find("em").eq(i);
+			//console.log(String(y));
+			obj.animate({
+				backgroundPositionY: String(y) + 'px'
+			}, 'slow', 'swing', function() {});
 		}
+	};
+	//小屏滚动
+	
+	window.onload = function(){
+		var m = 6,
+			winHeight = $(window).height(), //窗口的高度
+			boxHeight = $('.more').offset().top - ($(document).scrollTop()); // 盒子距离窗口顶部的距离
+
+		/*
+		 * 成交笔数旋转的函数
+		 */
+		function rollFun() {
+			var time1;
+			time1 = setInterval(function() {
+				m --;
+				if(m > 0) {
+					sNum = m % 2 ? $allNum.val() / m : $allNum.val() * m;
+					show_num(parseInt(sNum));
+				} else {
+					//console.log('ok+'+$allNum.val());
+					show_num(parseInt($allNum.val()));
+					clearInterval(time1)
+				}
+
+			}, 100);
+		};
+
+		if(boxHeight > winHeight) {
+			// 盒子未出現在第一屏的時候
+			window.onscroll = function() {
+				// 当前元素是否出现在屏幕中（浏览器高度 + 滚动条滚动的高度 - 盒子距离浏览器的高度）
+				var scrollTop = $('#js-more-nums').offset().top,
+					a = (winHeight + $(document).scrollTop()) - scrollTop;
+				//console.log(a);
+				if(a > 0){
+					rollFun();
+				}
+			}
+		} else {
+			rollFun();
+		}
+	}
 	</script>
 </html>
