@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>download-animation</title>
+	<style>
+		*{padding: 0; margin: 0; list-style: none;}
+		.box{width: 100%; text-align: center; padding: 30px 0;}
+		.load_btn{ display: inline-block; width: 100px; height: 50px; line-height: 50px; border-radius: 8px; background: lightblue; color: #fff; border: 1px solid #000; text-align: center; cursor: pointer;}
+		@-webkit-keyframes moveover{
+			0%{
+				transform: rotate(0deg);
+			}
+			100%{
+				transform: rotate(360deg);
+			}
+		}
+		.download_ing{
+			min-width: 50px;
+			width: 50px;
+			background-color: transparent;
+			transition: all .3s;
+			border: 1px solid #000;
+			border-radius: 50%;
+			border-top-color: transparent;
+			border-left-color: transparent;
+			animation: moveover .3s linear infinite;
+		}
+		.download-page-ing{
+			color: #fff;
+			bottom: 70px;
+			background: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<span class="load_btn">立即下载</span>
+	</div>
+</body>
+<script src="js/jquery_2_1_3_min.js"></script>
+<script>
+	$(".load_btn").on('click', function() {
+		//$('.download-page-ios').find('a').attr('href','javascript:;');
+		$('.load_btn').text('');
+		$('.load_btn').addClass('download_ing');
+		var timer = setTimeout(function() {
+			$('.box').addClass('download-page-ing').text('正在安装，请按 Home 键在桌面查看');
+		}, 3000);
+
+		wxFun();
+	});
+</script>
+</html>
