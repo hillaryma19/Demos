@@ -67,6 +67,7 @@
     <script>
     	var $moreNum = $("#js-more-nums"),
 			$allNum = $("#cur_num");
+		$moreNum.width($allNum.val().length * 24);
 		//交易笔数数字效果展示
 	function show_num(n) {
 		var it = $moreNum.find("em");
