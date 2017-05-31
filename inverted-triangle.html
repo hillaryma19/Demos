@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+			*{padding: 0; margin: 0; list-style: none;}
+			.tri-wrap{text-align: center; padding: 20px 0;}
+			.tri-wrap li{}
+			.tri-wrap li span{position: absolute; border-width: 10px; border-color: red transparent transparent; border-style: solid dashed dashed; width: 0; height: 0; font-size: 0;}
+			.tri-wrap li span:hover{transform: rotate(180deg); -webkit-transform: rotate(180deg); transform-origin: 50% 30% 0; -webkit-transform-origin: 50% 30% 0; transition: transform 0.2s ease-in; -webkit-transition: transform 0.2s ease-in;}
+        </style>
+    </head>
+    <body>
+    	<ul class="tri-wrap">
+    		<li><span>&nbsp;</span></li>
+    	</ul>
+    </body>
+</html>
