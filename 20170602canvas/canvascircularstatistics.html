@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>circular statistics</title>
+	<style>
+		*{padding: 0; margin: 0;}
+		body{width: 100%; height: 100%; background: #000;}
+		.wrap{padding: 20px 0; text-align: center;}
+		.wrap canvas{width: 600px; height: 600px; margin: 0 auto; background: #fff;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<canvas id="circular_canvas"></canvas>
+	</div>
+</body>
+<script>
+	var myCanvas = document.getElementById('circular_canvas'),
+		ctx = myCanvas.getContext('2d'),
+		cWidth = myCanvas.width,
+		cHeight = myCanvas.height,
+		data = {
+			'titile':'统计通讯工具使用情况',
+			'list':[
+				{'name':'qq','value':500},
+				{'name':'weChat','value':600},
+				{'name':'yy','value':100},
+				{'name':'dingding','value':400}
+			]
+		},
+		colors = 'lightblue,lightgreen,lightyellow,pink',
+		colorArr = colors.split(',');
+	//在canvas上面画图
+	toDraw();
+	function toDraw(){
+		//计算原点
+		var xo = cWidth / 2,
+			y0 = cHeight / 2,
+			r = 160,
+			start = - (Math.PI / 2),//起点是-90°，Math.PI为圆周率
+			end,//终点暂定
+			sum = 0;//统计数据的和
+		//计算统计数据的和
+		data.list.forEach(function(e){
+			console.log(e.value);
+			sum += e.value;
+		})
+		//计算每个通讯工具所占圆的弧度
+		data.list.forEach(function(e){
+			e.angle = e.value / (sum * 2 *Math.PI);
+		})
+
+	}
+</script>
+</html>
