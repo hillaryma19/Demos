@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas scratcher</title>
+    <style>
+        *{padding: 0; margin: 0; }
+        .wrap{padding: 20px 0; text-align: center; color: #000;}
+        .wrap canvas{width: 400px; height: 300px; margin: 0 auto; border: 1px solid #000; cursor: pointer;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <canvas id="scratch_canvas"></canvas>
+    </div>
+</body>
+<script>
+    var myCanvas = document.getElementById('scratch_canvas'),
+        ctx = myCanvas.getContext('2d'),//创建context对象
+        cWidth = myCanvas.width,
+        cHeight = myCanvas.height,
+        awards = ['呵呵','哈哈','嘿嘿','吼吼','nothing, so what!','great, still nothing!'],
+        awardRandom = awards[Math.floor(Math.random() * awards.length)];
+    //奖品信息绘制在canvas上
+    ctx.font = '600 28px Arial';
+    ctx.textAlign = 'center';
+    ctx.textBaseLine = 'middle';
+    ctx.fillText(awardRandom, cWidth / 2, cHeight / 2);
+
+    //将获奖信息换成canvas背景图，1为质量最高
+    var dataUrl = myCanvas.toDataURL('image/png', 1);
+    myCanvas.style.background = 'url('+dataUrl+') no-repeat center center';
+    console.log(dataUrl)
+    ctx.clearRect(0, 0, cWidth, cHeight);
+
+    //canvas蒙版
+    ctx.fillStyle = '#eee';
+    ctx.fillRect(0, 0, cWidth, cHeight);
+
+    //鼠标按下，抹去图层
+    var flag = false;
+    myCanvas.addEventListener('mousedown', function(){
+        flag = true;
+        ctx.globalCompositeOperation = 'destination-out';
+    })
+    //鼠标移动
+    myCanvas.addEventListener('mousemove',function(e){
+        //console.log(e);
+        if (flag) {
+            var x = e.clientX - myCanvas.offsetLeft,
+                y = e.clientY - myCanvas.offsetTop;
+            ctx.beginPath();
+            ctx.fillRect(x,y,30,30);
+            ctx.fill();
+        }
+    })
+    myCanvas.addEventListener('mouseup',function(){
+        flag = false;
+        ctx.globalCompositeOperation = 'source-over';
+    })
+</script>
+</html>
