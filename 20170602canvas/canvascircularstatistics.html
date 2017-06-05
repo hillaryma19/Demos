@@ -81,11 +81,11 @@
 			//关于文字
 			ctx.font = '12px 微软雅黑';
 			ctx.textAlign = txtAlign;
-			ctx.textBaseLine = 'bottom';
+			ctx.textBaseline = 'bottom';
 			ctx.fillText('  ' + e.name +':'+e.value +'  ', lineX + lineDirection, lineY);
 
-			//ctx.textBaseLine = 'top';
-			//ctx.fillText('  percent: ' + (e.value / sum * 100).toFixed(2) + '% ', lineX + lineDirection, lineY);
+			ctx.textBaseline = 'top';
+			ctx.fillText('  percent: ' + (e.value / sum * 100).toFixed(2) + '% ', lineX + lineDirection, lineY);
 			start = end;//终止弧度，也是开始弧度
 		})
 		//标题
