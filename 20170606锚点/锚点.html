@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>锚点</title>
+        <style>
+			*{padding: 0; margin: 0; list-style: none;}
+      html,body{height: 100%;}
+			.box{ text-align: center; height: 100%;}
+			.box:after{display: block; content: ''; clear: both; overflow: hidden;}
+			.box-lt{ float: left; width: 30%; height: 100%; overflow-y: auto; }
+			.box-lt li{ width: 100%; height: 100px; line-height: 100px; background: lightyellow; border-bottom: 1px solid #000;}
+			.box-lt li a{display: block; width: 100%; height: 100%;}
+			.box-rt{float: left; width: 70%; overflow-y: auto; }
+			.box-rt li{width: 100%; height: 500px; background: lightblue; border-bottom: 1px solid #fff;}
+        </style>
+    </head>
+    <body>
+   		<div class="box">
+   			<ul class="box-lt">
+   				<li><a href="#test1">1</a></li>
+   				<li><a href="#test2">2</a></li>
+   				<li><a href="#test3">3</a></li>
+   				<li><a href="#test4">4</a></li>
+   				<li><a href="#test5">5</a></li>
+   				<li><a href="#test6">6</a></li>
+   				<li><a href="#test7">7</a></li>
+   				<li><a href="#test8">8</a></li>
+   				<li><a href="#test9">9</a></li>
+   				<li><a href="#test10">10</a></li>
+   			</ul>
+   			<ul class="box-rt">
+   				<li id="test1">1</li>
+   				<li id="test2">2</li>
+   				<li id="test3">3</li>
+   				<li id="test4">4</li>
+   				<li id="test5">5</li>
+   				<li id="test6">6</li>
+   				<li id="test7">7</li>
+   				<li id="test8">8</li>
+   				<li id="test9">9</li>
+   				<li id="test10">10</li>
+   			</ul>
+   		</div>
+    </body>
+</html>
