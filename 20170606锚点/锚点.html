@@ -4,18 +4,19 @@
         <meta charset="utf-8">
         <title>锚点</title>
         <style>
-			*{padding: 0; margin: 0; list-style: none;}
-      html,body{height: 100%;}
-			.box{ text-align: center; height: 100%;}
-			.box:after{display: block; content: ''; clear: both; overflow: hidden;}
-			.box-lt{ float: left; width: 30%; height: 100%; overflow-y: auto; }
-			.box-lt li{ width: 100%; height: 100px; line-height: 100px; background: lightyellow; border-bottom: 1px solid #000;}
-			.box-lt li a{display: block; width: 100%; height: 100%;}
-			.box-rt{float: left; width: 70%; overflow-y: auto; }
-			.box-rt li{width: 100%; height: 500px; background: lightblue; border-bottom: 1px solid #fff;}
+    			*{padding: 0; margin: 0; list-style: none;}
+          html,body{height: 100%;}
+    			.box{ text-align: center; height: 100%;}
+    			.box:after{display: block; content: ''; clear: both; overflow: hidden;}
+    			.box-lt{ float: left; width: 30%; height: 100%; overflow-y: auto; }
+    			.box-lt li{ width: 100%; height: 100px; line-height: 100px; background: lightyellow; border-bottom: 1px solid #000;}
+    			.box-lt li a{display: block; width: 100%; height: 100%;}
+    			.box-rt{float: left; width: 70%; overflow-y: auto; }
+    			.box-rt li{width: 100%; height: 300px; background: lightblue; border-bottom: 1px solid #fff;}
         </style>
     </head>
     <body>
+      <h2>使用id定位</h2>
    		<div class="box">
    			<ul class="box-lt">
    				<li><a href="#test1">1</a></li>
@@ -42,5 +43,67 @@
    				<li id="test10">10</li>
    			</ul>
    		</div>
+      <h2>使用name锚点定位，注：name定位仅适用于a标签</h2>
+      <div class="box">
+        <ul class="box-lt">
+          <li><a href="#test21">1</a></li>
+          <li><a href="#test22">2</a></li>
+          <li><a href="#test23">3</a></li>
+          <li><a href="#test24">4</a></li>
+          <li><a href="#test25">5</a></li>
+          <li><a href="#test26">6</a></li>
+          <li><a href="#test27">7</a></li>
+          <li><a href="#test28">8</a></li>
+          <li><a href="#test29">9</a></li>
+          <li><a href="#test20">10</a></li>
+        </ul>
+        <ul class="box-rt">
+          <li><a name="test21">1</a></li>
+          <li><a name="test22">2</a></li>
+          <li><a name="test23">3</a></li>
+          <li><a name="test24">4</a></li>
+          <li><a name="test25">5</a></li>
+          <li><a name="test26">6</a></li>
+          <li><a name="test27">7</a></li>
+          <li><a name="test28">8</a></li>
+          <li><a name="test29">9</a></li>
+          <li><a name="test20">10</a></li>
+        </ul>
+      </div>
+      <h2>使用js</h2>
+      <div class="box">
+        <ul class="box-lt">
+          <li id="test31"><a>1</a></li>
+          <li id="test32"><a>2</a></li>
+          <li id="test33"><a>3</a></li>
+          <li id="test34"><a>4</a></li>
+          <li id="test35"><a>5</a></li>
+          <li id="test36"><a>6</a></li>
+          <li id="test37"><a>7</a></li>
+          <li id="test38"><a>8</a></li>
+          <li id="test39"><a>9</a></li>
+          <li id="test30"><a>10</a></li>
+        </ul>
+        <ul class="box-rt">
+          <li class="li1"><a>1</a></li>
+          <li class="li2"><a>2</a></li>
+          <li><a>3</a></li>
+          <li><a>4</a></li>
+          <li><a>5</a></li>
+          <li><a>6</a></li>
+          <li><a>7</a></li>
+          <li><a>8</a></li>
+          <li><a>9</a></li>
+          <li><a>10</a></li>
+        </ul>
+      </div>
     </body>
+    <script>
+      document.querySelector('#test31').onclick = function(){
+        document.querySelector('.li1').scrollIntoView();
+      }
+      document.querySelector('#test32').onclick = function(){
+        document.querySelector('.li2').scrollIntoView();
+      }
+    </script>
 </html>
