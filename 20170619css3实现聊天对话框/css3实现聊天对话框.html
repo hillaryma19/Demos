@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3实现聊天对话框</title>
+</head>
+<body>
+	<style type="text/css">
+		.showCase {
+			padding:20px;
+		}
+		.showCase:after,
+		.showCase:before {
+			display: table;
+			content: "";
+			clear:both;
+		}
+		.showCase div {
+			position:relative;
+		}
+		.showCase div b {
+			position:absolute;
+			font-size:0px;
+			line-height:0px;
+			margin:0;
+		}
+		.case-1 {
+			border:5px solid orange;
+			width:500px;
+			height:150px;
+		}
+		.case-1 b {
+			left:50px;
+			border-style:dashed dashed solid;
+		}
+		.case-1 b.b-1 {
+			border-width:0px 20px 15px;
+			border-color:transparent transparent orange;
+			top:-15px;
+		}
+		.case-1 b.b-2 {
+			border-width:0px 20px 15px;
+			border-color:transparent transparent white;
+			top:-10px;
+		}
+		.case-2 {
+			background-color:orange;
+			width:500px;
+			height:150px;
+			float:left;
+			margin-right:30px;
+		}
+		.case-2 b {
+			left:50px;
+			border-style:solid dashed dashed;
+		}
+		.case-2 b.b-1 {
+			border-width:15px 20px 0px;
+			border-color:orange transparent transparent;
+			bottom:-14px;
+		}
+		.case-2-1 {
+			width:300px;
+			height:130px;
+			margin-left:0px;
+			background-color:orange;
+			float:left;
+		}
+		.case-2-1 b.b-1 {
+			border-width:20px 10px 0 60px;
+			border-color:orange transparent;
+			border-style:solid dashed;
+			bottom:-20px;
+			left:60px;
+		}
+		.case-3 {
+			border:5px solid orange;
+			width:250px;
+			height:100px;
+			margin-left:50px;
+		}
+		.case-3 b {
+			top:15px;
+			border-style:dashed solid dashed solid;
+			border-width:20px 15px 20px 0px;
+		}
+		.case-3 b.b-1 {
+			border-color:transparent orange transparent orange;
+			left:-15px;
+		}
+		.case-3 b.b-2 {
+			border-color:transparent white transparent transparent;
+			left:-10px;
+		}
+		.case-4 {
+			border:5px solid orange;
+			width:250px;
+			height:100px;
+			margin-left:50px;
+			background-color:orange;
+		}
+		.case-4 b {
+			top:15px;
+			border-style:dashed solid dashed solid;
+			border-width:20px 0px 20px 15px;
+		}
+		.case-4 b.b-1 {
+			border-color:transparent orange transparent orange;
+			right:-15px;
+		}
+		.case-4 b.b-2 {
+			border-color:transparent white transparent white;
+			right:-10px;
+			display:none;
+		}
+		.case-5 {
+			border:5px solid orange;
+			width:200px;
+			height:80px;
+			margin:10px 0 10px 50px;
+			background-color:orange;
+			float:left;
+		}
+		.case-5 b.b-1 {
+			top:5px;
+			border-color:orange orange transparent transparent;
+			border-style:solid solid dashed dashed;
+			border-width:20px;
+			left:-40px;
+		}
+		.case-5 b.b-2 {
+			top:0px;
+			border-color:#fff #fff transparent transparent;
+			border-style:solid solid dashed dashed;
+			border-width:10px 20px 10px 28px;
+			left:-53px;
+		}
+		.case-5-1 {
+			width:200px;
+			height:80px;
+			margin-left:10px;
+			background-color:orange;
+			padding:5px;
+			margin:10px 0px 10px 50px;
+			float:left;
+		}
+		.case-5-1 b.b-1 {
+			top:15px;
+			border-color:transparent orange;
+			border-style:solid solid dashed;
+			border-width:0px 0px 40px 40px;
+			right:-40px;
+		}
+		.case-5-1 b.b-2 {
+			top:15px;
+			border-color:transparent #fff;
+			border-style:solid solid dashed;
+			border-width:0px 0px 15px 40px;
+			right:-40px;
+		}
+		.case-6 {
+			background-color:orange;
+			width:150px;
+			height:30px;
+		}
+		.case-6 b.b-1 {
+			border-width:15px 25px;
+			border-style:solid dashed solid solid;
+			border-color:orange transparent orange orange;
+			right:-28px;
+			top:0px;
+		}
+		.case-6 b.b-2 {
+			border-width:2px 2px 2px 0px;
+			border-style:dashed solid dashed dashed;
+			border-color:transparent orange transparent transparent;
+			left:-2px;
+			top:0px;
+			height:26px;
+		}
+		.case-7 {
+			background-color:orange;
+			width:150px;
+			height:30px;
+			margin-left:30px;
+		}
+		.case-7 b {
+			height:26px;
+			top:0px;
+		}
+		.case-7 b.b-1 {
+			border-color:transparent orange transparent transparent;
+			border-width:2px 2px 2px 0px;
+			border-style:dashed solid dashed solid;
+			left:-2px;
+		}
+		.case-7 b.b-2 {
+			border-color:transparent transparent transparent orange;
+			border-width:2px 0px 2px 2px;
+			border-style:dashed solid dashed solid;
+			right:-2px;
+		}
+
+		</style>
+
+		<div class="showCase">
+		    <div class="case-1"><b class="b-1"></b><b class="b-2"></b></div>
+		</div>
+
+		<div class="showCase">
+		    <div class="case-2"><b class="b-1"></b></div>
+		    <div class="case-2-1"><b class="b-1"></b><b class="b-2"></b></div>
+		</div>
+		<div class="showCase">
+		    <div class="case-3"><b class="b-1"></b><b class="b-2"></b></div>
+		</div>
+		<div class="showCase">
+		    <div class="case-4"><b class="b-1"></b><b class="b-2"></b></div>
+		</div>
+		<div class="showCase">
+		    <div class="case-5"><b class="b-1"></b><b class="b-2"></b></div>
+		    <div class="case-5-1"><b class="b-1"></b><b class="b-2"></b></div>
+		</div>
+		<div class="showCase">
+		    <div class="case-6"><b class="b-1"></b><b class="b-2"></b></div>
+		</div>
+		<div class="showCase">
+		    <div class="case-7"><b class="b-1"></b><b class="b-2"></b></div>
+		</div>
+</body>
+</html>

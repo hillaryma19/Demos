@@ -4,18 +4,82 @@
 	<meta charset="UTF-8">
 	<title>login</title>
 	<link rel="stylesheet" href="css/login.css">
+	<link rel="icon" href="img/3.jpg" type="image/jpg" sizes="16×16">
+	<base href="img/">
 	<style>
-		
+		.blue{color: lightblue;}
 	</style>
+	<script src="js/jquery_2_1_3_min.js"></script>
+	<script src="js/zepto.min.js"></script>
 </head>
 <body>
 	<div class="wrap">
+		<div>
+			<img src="pic.jpg" height="320" width="228" alt="">
+		</div>
 		<div>
 			<span class="tit">login:</span><input type="text" placeholder="username">
 		</div>
 		<div>
 			<span class="tit">password:</span><input type="password" placeholder="password">
 		</div>
+		<div><button id="test-btn">test</button></div>
+		<div>
+			<progress max="100" value="85"><span>85</span>%</progress>
+		</div>
+		<div>
+			<p>today is Friday! <mark style="color:#fff; background: #000;">yes, it is!</mark></p>
+		</div>
+		<div>
+			<time datetime="2017-06-16" pubdate>2017-06-16</time>
+		</div>
+		<div>
+			<form action="">
+				<input type="text" list="cars" id="myCar">
+				<datalist id="cars">
+					<option value="呵呵"></option>
+					<option value="哈哈"></option>
+					<option value="嘿嘿"></option>
+					<option value="吼吼"></option>
+					<option value="嘻嘻"></option>
+					<option value="喽喽"></option>
+				</datalist>
+			</form>
+		</div>
+		<div>
+			<form action="">
+				加密：<keygen name="security" />
+			</form>
+		</div>
+		<div>
+			<ol style="" start="20" reversed>
+				<li>hello</li>
+				<li>hi</li>
+				<li>salue</li>
+			</ol>
+		</div>
+		<div>
+			<menu type="context">
+				<li><input type="checkbox">milk</li>
+				<li><input type="checkbox">egg</li>
+				<li><input type="checkbox">bread</li>
+			</menu>
+		</div>
+		<div><input type="text" tabindex="3" style="border:1px solid #000;"></div>
+		<div><textarea name="" id="" spellcheck="true" tabindex="2" cols="30" rows="10" style="border:1px solid #000;"></textarea></div>
+		<div><input type="text" tabindex="1" style="border:1px solid #000;"></div>
+		<div contenteditable="true" style="width: 500px; height:40px; line-height: 20px; border: 1px solid #000;">请输入内容</div>
 	</div>
 </body>
 </html>
+<script>
+	$.fn.extend({
+		clickAlert:function(){
+			$(this).on('click',function(){
+				alert(123);
+			})
+		}
+	})
+	$('#test-btn').clickAlert();
+	
+</script>
