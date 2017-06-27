@@ -1,16 +1,13 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>盒子-票</title>
+		<title>盒子飘动</title>
 		<style type="text/css">
-			#img{position: absolute; left: 311; top: 815;visibility :hidden;border:1px solid #000; width:200px; height:100px;}
-			#img a{display: inline-block;}
-			.imgcon{width:100%;height:100%; cursor:pointer}
-			.ficon{cursor:pointer;position: absolute; width:18px;height: 18px;background: url(images/close.png) no-repeat;top:0;right: 0;}
+			#box{position: absolute; visibility :hidden;border:1px solid #000; width:200px; height:100px;}
 		</style>
 	</head>
 	<body>
-		<div id="img"onmouseover="clearInterval(interval)" onmouseout="interval = setInterval('changePos()', delay)"></div>
+		<div id="box"onmouseover="clearInterval(interval)" onmouseout="interval = setInterval('changePos()', delay)"></div>
 		<script type="text/javascript">			
 			var xPos = 20;
 			var yPos = document.body.clientHeight;
@@ -23,15 +20,15 @@
 			var xon = 0;
 			var pause = true;
 			var interval;
-			var img =document.getElementById('img');
-			img.style.top = yPos;
+			var box =document.getElementById('box');
+			box.style.top = yPos;
 			function changePos() {
 				width = document.body.clientWidth;
 				height = document.body.clientHeight;
-				Hoffset = img.offsetHeight;
-				Woffset = img.offsetWidth;
-				img.style.left = xPos + document.body.scrollLeft;
-				img.style.top = yPos + document.body.scrollTop;
+				Hoffset = box.offsetHeight;
+				Woffset = box.offsetWidth;
+				box.style.left = xPos + document.body.scrollLeft;
+				box.style.top = yPos + document.body.scrollTop;
 				if (yon) {
 					console.log(yon)
 					yPos = yPos + step;
@@ -61,7 +58,7 @@
 				}
 			}
 			function start() {
-				img.style.visibility = "visible";
+				box.style.visibility = "visible";
 				interval = setInterval(changePos, delay);
 			}
 			
