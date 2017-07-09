@@ -9,89 +9,78 @@
 	</head>
 	<style>
 		html *{margin:0;padding:0;-webkit-font-smoothing: antialiased;font-family:'微软雅黑','Microsoft YaHei',Verdana,Helvetica,Arial;font-size: 14px;color: #2d2d2d;}
-		body{background: #f2f1f1;}
+		body{background: #f2f1f1; padding: 20px 0;}
 		ul,ul li{list-style:none;}
 		a:link {color: #2d2d2d;text-decoration: none;}
 		a:visited {color: #2d2d2d;text-decoration: none;}
 		a:hover {color: #09C;text-decoration: none;}
 		a:active {color: #09C;text-decoration: none;}
-		
-		/*start*/
-		.time-axis{box-sizing:border-box;width: 800px;overflow: hidden;margin: 0 auto;position: relative;}
-		.time-axis-border{width: 1px;height: 100%;position: absolute;top: 0;left: 50%;margin-left: -0.5px;background-color: #9e9b9b;}
-		.time-axis-con{box-sizing: border-box;width: 100%;overflow: hidden;margin-bottom: 15px;}
-		.time-axis-date{font-size: 12px;color: #aaa;margin-bottom: 5px;}
-		.time-axis-detail{box-sizing: border-box;width: 50%;padding:0 10px;}
-		.time-axis-detail p{word-break: break-all;}
-		.time-axis-con:nth-of-type(odd) .time-axis-detail{text-align: left;float: right;}
-		.time-axis-con:nth-of-type(even) .time-axis-detail{text-align: right;float: left;}		
-		.time-axis-dot span{width: 10px;height: 10px;border-radius:50%;margin: 10px auto;background-color:#9e9b9b;display: block;}		
+		.time{box-sizing:border-box;width: 800px;overflow: hidden;margin: 0 auto;position: relative;}
+		.time-border{width: 1px;height: 100%;position: absolute;top: 0;left: 50%;margin-left: -0.5px;background-color: #9e9b9b;}
+		.time-con{box-sizing: border-box;width: 100%;overflow: hidden;margin-bottom: 15px;}
+		.time-date{font-size: 12px;color: #aaa;margin-bottom: 5px;}
+		.time-detail{box-sizing: border-box;width: 50%;padding:0 10px;}
+		.time-detail p{word-break: break-all;}
+		.time-con:nth-of-type(odd) .time-detail{text-align: left;float: right;}
+		.time-con:nth-of-type(even) .time-detail{text-align: right;float: left;}		
+		.time-dot span{width: 10px;height: 10px;border-radius:50%;margin: 10px auto;background-color:#9e9b9b;display: block;}		
 	</style>
 	<body>
-		<!--
-        	作者：dyyzht
-        	时间：2017-06-23
-        	描述：none
-        -->
-		<h1 style="text-align: center;margin: 20px;">CSS3时间轴</h1>
-		
-		<div class="time-axis">
-			<div class="time-axis-border"></div>
-			<div class="time-axis-con">
-				<div class="time-axis-dot"><span></span></div>				
-				<div class="time-axis-detail">
-					<div class="time-axis-date">2017-6-23</div>
+		<div class="time">
+			<div class="time-border"></div>
+			<div class="time-con">
+				<div class="time-dot"><span></span></div>				
+				<div class="time-detail">
+					<div class="time-date">Monday</div>
 					<div>
-						<a href="#">百度编辑器是个大坑</a>
+						<a href="#">This is not a good one.</a>
 					</div>
 				</div>
 			</div>
-			<div class="time-axis-con">
-				<div class="time-axis-dot"><span></span></div>				
-				<div class="time-axis-detail">
-					<div class="time-axis-date">2017-6-22</div>
+			<div class="time-con">
+				<div class="time-dot"><span></span></div>				
+				<div class="time-detail">
+					<div class="time-date">Tuesday</div>
 					<div>
-						<p>我本凡夫俗子，何需附庸风雅，故作姿态。</p>						
+						<p>Maybe, maybe not.</p>						
 					</div>
 				</div>
-			</div><div class="time-axis-con">
-				<div class="time-axis-dot"><span></span></div>				
-				<div class="time-axis-detail">
-					<div class="time-axis-date">2017-6-23</div>
+			</div><div class="time-con">
+				<div class="time-dot"><span></span></div>				
+				<div class="time-detail">
+					<div class="time-date">Wednesday</div>
 					<div>
-						<a href="#">百度编辑器是个大坑</a>
-					</div>
-				</div>
-			</div>
-			<div class="time-axis-con">
-				<div class="time-axis-dot"><span></span></div>				
-				<div class="time-axis-detail">
-					<div class="time-axis-date">2017-6-22</div>
-					<div>
-						<p>我本凡夫俗子，何需附庸风雅，故作姿态。</p>						
+						<a href="#">Who knows!</a>
 					</div>
 				</div>
 			</div>
-			<div class="time-axis-con">
-				<div class="time-axis-dot"><span></span></div>				
-				<div class="time-axis-detail">
-					<div class="time-axis-date">2017-6-23</div>
+			<div class="time-con">
+				<div class="time-dot"><span></span></div>				
+				<div class="time-detail">
+					<div class="time-date">Thursday</div>
 					<div>
-						<a href="#">百度编辑器是个大坑</a>
+						<p>Maybe it is not that bad.</p>						
 					</div>
 				</div>
 			</div>
-			<div class="time-axis-con">
-				<div class="time-axis-dot"><span></span></div>				
-				<div class="time-axis-detail">
-					<div class="time-axis-date">2017-6-22</div>
+			<div class="time-con">
+				<div class="time-dot"><span></span></div>				
+				<div class="time-detail">
+					<div class="time-date">Friday</div>
 					<div>
-						<p>我本凡夫俗子，何需附庸风雅，故作姿态。</p>						
+						<a href="#">Today is Friday!</a>
+					</div>
+				</div>
+			</div>
+			<div class="time-con">
+				<div class="time-dot"><span></span></div>				
+				<div class="time-detail">
+					<div class="time-date">Saturday</div>
+					<div>
+						<p>Everyone loves it!</p>						
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<h1 style="text-align: center;margin: 20px;">CSS3时间轴</h1>
 	</body>
 </html>
