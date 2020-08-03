@@ -1,0 +1,1899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+/*!
+ * snack.css - v2.1.2
+ * A minimal CSS framework for web.
+ * https://nzbin.github.io/snack/
+ *
+ * Copyright (c) 2017 nzbin
+ * Released under MIT License
+ */
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+figcaption,
+figure,
+main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+[hidden] {
+  display: none;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.42858;
+}
+
+a {
+  text-decoration: none;
+  color: #348fe2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+small,
+.small {
+  font-weight: 400;
+  line-height: 1;
+  color: #777;
+  font-size: 65%;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 12px;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter .col, .row.no-gutter .col-1, .row.no-gutter .col-2, .row.no-gutter .col-3, .row.no-gutter .col-4, .row.no-gutter .col-5, .row.no-gutter .col-6, .row.no-gutter .col-7, .row.no-gutter .col-8, .row.no-gutter .col-9, .row.no-gutter .col-10, .row.no-gutter .col-11, .row.no-gutter .col-12 {
+  padding: 0;
+}
+
+.col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 576px) {
+  .col-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 8.33333%;
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+  }
+  .col-offset-1 {
+    margin-left: 8.33333%;
+  }
+  .col-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.66667%;
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+  .col-offset-2 {
+    margin-left: 16.66667%;
+  }
+  .col-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-offset-3 {
+    margin-left: 25%;
+  }
+  .col-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
+  .col-offset-4 {
+    margin-left: 33.33333%;
+  }
+  .col-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 41.66667%;
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+  }
+  .col-offset-5 {
+    margin-left: 41.66667%;
+  }
+  .col-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-offset-6 {
+    margin-left: 50%;
+  }
+  .col-7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 58.33333%;
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+  }
+  .col-offset-7 {
+    margin-left: 58.33333%;
+  }
+  .col-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66.66667%;
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+  }
+  .col-offset-8 {
+    margin-left: 66.66667%;
+  }
+  .col-9 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .col-offset-9 {
+    margin-left: 75%;
+  }
+  .col-10 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 83.33333%;
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+  }
+  .col-offset-10 {
+    margin-left: 83.33333%;
+  }
+  .col-11 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 91.66667%;
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+  }
+  .col-offset-11 {
+    margin-left: 91.66667%;
+  }
+  .col-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .col-offset-12 {
+    margin-left: 100%;
+  }
+  .cols-10 > .col-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;
+  }
+  .cols-10 > .col-offset-1 {
+    margin-left: 10%;
+  }
+  .cols-10 > .col-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .cols-10 > .col-offset-2 {
+    margin-left: 20%;
+  }
+  .cols-10 > .col-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+  .cols-10 > .col-offset-3 {
+    margin-left: 30%;
+  }
+  .cols-10 > .col-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  .cols-10 > .col-offset-4 {
+    margin-left: 40%;
+  }
+  .cols-10 > .col-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .cols-10 > .col-offset-5 {
+    margin-left: 50%;
+  }
+  .cols-10 > .col-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    max-width: 60%;
+  }
+  .cols-10 > .col-offset-6 {
+    margin-left: 60%;
+  }
+  .cols-10 > .col-7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 70%;
+    flex: 0 0 70%;
+    max-width: 70%;
+  }
+  .cols-10 > .col-offset-7 {
+    margin-left: 70%;
+  }
+  .cols-10 > .col-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 80%;
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+  .cols-10 > .col-offset-8 {
+    margin-left: 80%;
+  }
+  .cols-10 > .col-9 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 90%;
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+  .cols-10 > .col-offset-9 {
+    margin-left: 90%;
+  }
+  .cols-10 > .col-10 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .cols-10 > .col-offset-10 {
+    margin-left: 100%;
+  }
+  .col {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}
+
+.clearfix::before, .clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/*# sourceMappingURL=snack.css.map */
+
+/*!
+ * three-dots - v0.2.0
+ * CSS loading animation made by single element.
+ * https://nzbin.github.io/three-dots/
+ *
+ * Copyright (c) 2018 nzbin
+ * Released under MIT License
+ */
+ /* @charset "UTF-8"; */
+/**
+ * ==============================================
+ * Dot Elastic
+ * ==============================================
+ */
+.dot-elastic {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dot-elastic 1s infinite linear;
+}
+
+.dot-elastic::before, .dot-elastic::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-elastic::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dot-elastic-before 1s infinite linear;
+}
+
+.dot-elastic::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dot-elastic-after 1s infinite linear;
+}
+
+@keyframes dot-elastic-before {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1.5);
+  }
+  50% {
+    transform: scale(1, 0.67);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes dot-elastic {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 1.5);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes dot-elastic-after {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 0.67);
+  }
+  75% {
+    transform: scale(1, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Pulse
+ * ==============================================
+ */
+.dot-pulse {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  box-shadow: 9999px 0 0 -5px #9880ff;
+  animation: dot-pulse 1.5s infinite linear;
+  animation-delay: .25s;
+}
+
+.dot-pulse::before, .dot-pulse::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+}
+
+.dot-pulse::before {
+  box-shadow: 9984px 0 0 -5px #9880ff;
+  animation: dot-pulse-before 1.5s infinite linear;
+  animation-delay: 0s;
+}
+
+.dot-pulse::after {
+  box-shadow: 10014px 0 0 -5px #9880ff;
+  animation: dot-pulse-after 1.5s infinite linear;
+  animation-delay: .5s;
+}
+
+@keyframes dot-pulse-before {
+  0% {
+    box-shadow: 9984px 0 0 -5px #9880ff;
+  }
+  30% {
+    box-shadow: 9984px 0 0 2px #9880ff;
+  }
+  60%,
+  100% {
+    box-shadow: 9984px 0 0 -5px #9880ff;
+  }
+}
+
+@keyframes dot-pulse {
+  0% {
+    box-shadow: 9999px 0 0 -5px #9880ff;
+  }
+  30% {
+    box-shadow: 9999px 0 0 2px #9880ff;
+  }
+  60%,
+  100% {
+    box-shadow: 9999px 0 0 -5px #9880ff;
+  }
+}
+
+@keyframes dot-pulse-after {
+  0% {
+    box-shadow: 10014px 0 0 -5px #9880ff;
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px #9880ff;
+  }
+  60%,
+  100% {
+    box-shadow: 10014px 0 0 -5px #9880ff;
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Flashing
+ * ==============================================
+ */
+.dot-flashing {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dot-flashing 1s infinite linear alternate;
+  animation-delay: .5s;
+}
+
+.dot-flashing::before, .dot-flashing::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-flashing::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dot-flashing::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dot-flashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dot-flashing {
+  0% {
+    background-color: #9880ff;
+  }
+  50%,
+  100% {
+    background-color: #ebe6ff;
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Collision
+ * ==============================================
+ */
+.dot-collision {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+}
+
+.dot-collision::before, .dot-collision::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-collision::before {
+  left: -10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dot-collision-before 2s infinite ease-in;
+}
+
+.dot-collision::after {
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dot-collision-after 2s infinite ease-in;
+  animation-delay: 1s;
+}
+
+@keyframes dot-collision-before {
+  0%,
+  50%,
+  75%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-15px);
+  }
+}
+
+@keyframes dot-collision-after {
+  0%,
+  50%,
+  75%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(15px);
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Revolution
+ * ==============================================
+ */
+.dot-revolution {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+}
+
+.dot-revolution::before, .dot-revolution::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+}
+
+.dot-revolution::before {
+  left: 0;
+  top: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  transform-origin: 5px 20px;
+  animation: dot-revolution 1.4s linear infinite;
+}
+
+.dot-revolution::after {
+  left: 0;
+  top: -30px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  transform-origin: 5px 35px;
+  animation: dot-revolution 1s linear infinite;
+}
+
+@keyframes dot-revolution {
+  0% {
+    transform: rotateZ(0deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotateZ(360deg) translate3d(0, 0, 0);
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Carousel
+ * ==============================================
+ */
+.dot-carousel {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  animation: dot-carousel 1.5s infinite linear;
+}
+
+@keyframes dot-carousel {
+  0% {
+    box-shadow: 9984px 0 0 -1px #9880ff, 9999px 0 0 1px #9880ff, 10014px 0 0 -1px #9880ff;
+  }
+  50% {
+    box-shadow: 10014px 0 0 -1px #9880ff, 9984px 0 0 -1px #9880ff, 9999px 0 0 1px #9880ff;
+  }
+  100% {
+    box-shadow: 9999px 0 0 1px #9880ff, 10014px 0 0 -1px #9880ff, 9984px 0 0 -1px #9880ff;
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Typing
+ * ==============================================
+ */
+.dot-typing {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  animation: dot-typing 1.5s infinite linear;
+}
+
+@keyframes dot-typing {
+  0% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  }
+  16.667% {
+    box-shadow: 9984px -10px 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  }
+  33.333% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px -10px 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  }
+  66.667% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  }
+  83.333% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px -10px 0 0 #9880ff;
+  }
+  100% {
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Windmill
+ * ==============================================
+ */
+.dot-windmill {
+  position: relative;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  transform-origin: 5px 15px;
+  animation: dot-windmill 2s infinite linear;
+}
+
+.dot-windmill::before, .dot-windmill::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+}
+
+.dot-windmill::before {
+  left: -8.66px;
+  top: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+}
+
+.dot-windmill::after {
+  left: 8.66px;
+  top: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+}
+
+@keyframes dot-windmill {
+  0% {
+    transform: rotateZ(0deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotateZ(720deg) translate3d(0, 0, 0);
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Bricks
+ * ==============================================
+ */
+.dot-bricks {
+  position: relative;
+  top: 8px;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  box-shadow: 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff;
+  animation: dot-bricks 2s infinite ease;
+}
+
+@keyframes dot-bricks {
+  0% {
+    box-shadow: 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff;
+  }
+  8.333% {
+    box-shadow: 10007px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff;
+  }
+  16.667% {
+    box-shadow: 10007px -16px 0 0 #9880ff, 9991px -16px 0 0 #9880ff, 10007px 0 0 0 #9880ff;
+  }
+  25% {
+    box-shadow: 10007px -16px 0 0 #9880ff, 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff;
+  }
+  33.333% {
+    box-shadow: 10007px 0 0 0 #9880ff, 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff;
+  }
+  41.667% {
+    box-shadow: 10007px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff;
+  }
+  50% {
+    box-shadow: 10007px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff, 9991px -16px 0 0 #9880ff;
+  }
+  58.333% {
+    box-shadow: 9991px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff, 9991px -16px 0 0 #9880ff;
+  }
+  66.666% {
+    box-shadow: 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff, 9991px -16px 0 0 #9880ff;
+  }
+  75% {
+    box-shadow: 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff;
+  }
+  83.333% {
+    box-shadow: 9991px -16px 0 0 #9880ff, 10007px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff;
+  }
+  91.667% {
+    box-shadow: 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff;
+  }
+  100% {
+    box-shadow: 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff;
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Floating
+ * ==============================================
+ */
+.dot-floating {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dot-floating 3s infinite cubic-bezier(0.15, 0.6, 0.9, 0.1);
+}
+
+.dot-floating::before, .dot-floating::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-floating::before {
+  left: -12px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dot-floating-before 3s infinite ease-in-out;
+}
+
+.dot-floating::after {
+  left: -24px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dot-floating-after 3s infinite cubic-bezier(0.4, 0, 1, 1);
+}
+
+@keyframes dot-floating {
+  0% {
+    left: calc(-50% - 5px);
+  }
+  75% {
+    left: calc(50% + 105px);
+  }
+  100% {
+    left: calc(50% + 105px);
+  }
+}
+
+@keyframes dot-floating-before {
+  0% {
+    left: -50px;
+  }
+  50% {
+    left: -12px;
+  }
+  75% {
+    left: -50px;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+@keyframes dot-floating-after {
+  0% {
+    left: -100px;
+  }
+  50% {
+    left: -24px;
+  }
+  75% {
+    left: -100px;
+  }
+  100% {
+    left: -100px;
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Fire
+ * ==============================================
+ */
+.dot-fire {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  box-shadow: 9999px 22.5px 0 -5px #9880ff;
+  animation: dot-fire 1.5s infinite linear;
+  animation-delay: -.85s;
+}
+
+.dot-fire::before, .dot-fire::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+}
+
+.dot-fire::before {
+  box-shadow: 9999px 22.5px 0 -5px #9880ff;
+  animation: dot-fire 1.5s infinite linear;
+  animation-delay: -1.85s;
+}
+
+.dot-fire::after {
+  box-shadow: 9999px 22.5px 0 -5px #9880ff;
+  animation: dot-fire 1.5s infinite linear;
+  animation-delay: -2.85s;
+}
+
+@keyframes dot-fire {
+  1% {
+    box-shadow: 9999px 22.5px 0 -5px #9880ff;
+  }
+  50% {
+    box-shadow: 9999px -5.625px 0 2px #9880ff;
+  }
+  100% {
+    box-shadow: 9999px -22.5px 0 -5px #9880ff;
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Spin
+ * ==============================================
+ */
+.dot-spin {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: transparent;
+  box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 0 rgba(152, 128, 255, 0), 0 18px 0 0 rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 0 rgba(152, 128, 255, 0), -18px 0 0 0 rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 0 rgba(152, 128, 255, 0);
+  animation: dot-spin 1.5s infinite linear;
+}
+
+@keyframes dot-spin {
+  0%,
+  100% {
+    box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  12.5% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 0 #9880ff, 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  25% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 0 #9880ff, 0 18px 0 0 #9880ff, -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  37.5% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 0 #9880ff, 0 18px 0 0 #9880ff, -12.72984px 12.72984px 0 0 #9880ff, -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  50% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 0 #9880ff, -12.72984px 12.72984px 0 0 #9880ff, -18px 0 0 0 #9880ff, -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  62.5% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 0 #9880ff, -18px 0 0 0 #9880ff, -12.72984px -12.72984px 0 0 #9880ff;
+  }
+  75% {
+    box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 0 #9880ff, -12.72984px -12.72984px 0 0 #9880ff;
+  }
+  87.5% {
+    box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 0 #9880ff;
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Falling
+ * ==============================================
+ */
+.dot-falling {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  box-shadow: 9999px 0 0 0 #9880ff;
+  animation: dot-falling 1s infinite linear;
+  animation-delay: .1s;
+}
+
+.dot-falling::before, .dot-falling::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-falling::before {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dot-falling-before 1s infinite linear;
+  animation-delay: 0s;
+}
+
+.dot-falling::after {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dot-falling-after 1s infinite linear;
+  animation-delay: .2s;
+}
+
+@keyframes dot-falling {
+  0% {
+    box-shadow: 9999px -15px 0 0 rgba(152, 128, 255, 0);
+  }
+  25%,
+  50%,
+  75% {
+    box-shadow: 9999px 0 0 0 #9880ff;
+  }
+  100% {
+    box-shadow: 9999px 15px 0 0 rgba(152, 128, 255, 0);
+  }
+}
+
+@keyframes dot-falling-before {
+  0% {
+    box-shadow: 9984px -15px 0 0 rgba(152, 128, 255, 0);
+  }
+  25%,
+  50%,
+  75% {
+    box-shadow: 9984px 0 0 0 #9880ff;
+  }
+  100% {
+    box-shadow: 9984px 15px 0 0 rgba(152, 128, 255, 0);
+  }
+}
+
+@keyframes dot-falling-after {
+  0% {
+    box-shadow: 10014px -15px 0 0 rgba(152, 128, 255, 0);
+  }
+  25%,
+  50%,
+  75% {
+    box-shadow: 10014px 0 0 0 #9880ff;
+  }
+  100% {
+    box-shadow: 10014px 15px 0 0 rgba(152, 128, 255, 0);
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Stretching
+ * ==============================================
+ */
+.dot-stretching {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  transform: scale(1.25, 1.25);
+  animation: dot-stretching 2s infinite ease-in;
+}
+
+.dot-stretching::before, .dot-stretching::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-stretching::before {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dot-stretching-before 2s infinite ease-in;
+}
+
+.dot-stretching::after {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dot-stretching-after 2s infinite ease-in;
+}
+
+@keyframes dot-stretching {
+  0% {
+    transform: scale(1.25, 1.25);
+  }
+  50%,
+  60% {
+    transform: scale(0.8, 0.8);
+  }
+  100% {
+    transform: scale(1.25, 1.25);
+  }
+}
+
+@keyframes dot-stretching-before {
+  0% {
+    transform: translate(0) scale(0.7, 0.7);
+  }
+  50%,
+  60% {
+    transform: translate(-20px) scale(1, 1);
+  }
+  100% {
+    transform: translate(0) scale(0.7, 0.7);
+  }
+}
+
+@keyframes dot-stretching-after {
+  0% {
+    transform: translate(0) scale(0.7, 0.7);
+  }
+  50%,
+  60% {
+    transform: translate(20px) scale(1, 1);
+  }
+  100% {
+    transform: translate(0) scale(0.7, 0.7);
+  }
+}
+
+/**
+ * ==============================================
+ * Experiment: Gooey Effect
+ * Dot Gathering
+ * ==============================================
+ */
+.dot-gathering {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: black;
+  color: transparent;
+  margin: -1px 0;
+  filter: blur(2px);
+}
+
+.dot-gathering::before, .dot-gathering::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: black;
+  color: transparent;
+  opacity: 0;
+  filter: blur(2px);
+  animation: dot-gathering 2s infinite ease-in;
+}
+
+.dot-gathering::after {
+  animation-delay: .5s;
+}
+
+@keyframes dot-gathering {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  35%,
+  60% {
+    opacity: 1;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+
+/**
+ * ==============================================
+ * Experiment: Gooey Effect
+ * Dot Hourglass
+ * ==============================================
+ */
+.dot-hourglass {
+  position: relative;
+  top: -15px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: black;
+  color: transparent;
+  margin: -1px 0;
+  filter: blur(2px);
+  transform-origin: 5px 20px;
+  animation: dot-hourglass 2.4s infinite ease-in-out;
+  animation-delay: .6s;
+}
+
+.dot-hourglass::before, .dot-hourglass::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: black;
+  color: transparent;
+  filter: blur(2px);
+}
+
+.dot-hourglass::before {
+  top: 30px;
+}
+
+.dot-hourglass::after {
+  animation: dot-hourglass-after 2.4s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+@keyframes dot-hourglass {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(180deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  75% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes dot-hourglass-after {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(30px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/**
+ * ==============================================
+ * Experiment: Gooey Effect
+ * Dot Overtaking
+ * ==============================================
+ */
+.dot-overtaking {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: transparent;
+  color: black;
+  margin: -1px 0;
+  box-shadow: 0 -20px 0 0;
+  filter: blur(2px);
+  animation: dot-overtaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+}
+
+.dot-overtaking::before, .dot-overtaking::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: transparent;
+  color: black;
+  box-shadow: 0 -20px 0 0;
+  filter: blur(2px);
+}
+
+.dot-overtaking::before {
+  animation: dot-overtaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+  animation-delay: .3s;
+}
+
+.dot-overtaking::after {
+  animation: dot-overtaking 1.5s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+  animation-delay: .6s;
+}
+
+@keyframes dot-overtaking {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+/**
+ * ==============================================
+ * Experiment: Gooey Effect
+ * Dot Shuttle
+ * ==============================================
+ */
+.dot-shuttle {
+  position: relative;
+  left: -15px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: black;
+  color: transparent;
+  margin: -1px 0;
+  filter: blur(2px);
+}
+
+.dot-shuttle::before, .dot-shuttle::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: black;
+  color: transparent;
+  filter: blur(2px);
+}
+
+.dot-shuttle::before {
+  left: 15px;
+  animation: dot-shuttle 2s infinite ease-out;
+}
+
+.dot-shuttle::after {
+  left: 30px;
+}
+
+@keyframes dot-shuttle {
+  0%,
+  50%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-45px);
+  }
+  75% {
+    transform: translateX(45px);
+  }
+}
+
+/**
+ * ==============================================
+ * Experiment: Emoji
+ * Dot Bouncing
+ * ==============================================
+ */
+.dot-bouncing {
+  position: relative;
+  height: 10px;
+  font-size: 10px;
+}
+
+.dot-bouncing::before {
+  content: '⚽🏀🏐';
+  display: inline-block;
+  position: relative;
+  animation: dot-bouncing 1s infinite;
+}
+
+@keyframes dot-bouncing {
+  0% {
+    top: -20px;
+    animation-timing-function: ease-in;
+  }
+  34% {
+    transform: scale(1, 1);
+  }
+  35% {
+    top: 20px;
+    animation-timing-function: ease-out;
+    transform: scale(1.5, 0.5);
+  }
+  45% {
+    transform: scale(1, 1);
+  }
+  90% {
+    top: -20px;
+  }
+  100% {
+    top: -20px;
+  }
+}
+
+/**
+ * ==============================================
+ * Experiment: Emoji
+ * Dot Rolling
+ * ==============================================
+ */
+.dot-rolling {
+  position: relative;
+  height: 10px;
+  font-size: 10px;
+}
+
+.dot-rolling::before {
+  content: '⚽';
+  display: inline-block;
+  position: relative;
+  transform: translateX(-25px);
+  animation: dot-rolling 3s infinite;
+}
+
+@keyframes dot-rolling {
+  0% {
+    content: '⚽';
+    transform: translateX(-25px) rotateZ(0deg);
+  }
+  16.667% {
+    content: '⚽';
+    transform: translateX(25px) rotateZ(720deg);
+  }
+  33.333% {
+    content: '⚽';
+    transform: translateX(-25px) rotateZ(0deg);
+  }
+  34.333% {
+    content: '🏀';
+    transform: translateX(-25px) rotateZ(0deg);
+  }
+  50% {
+    content: '🏀';
+    transform: translateX(25px) rotateZ(720deg);
+  }
+  66.667% {
+    content: '🏀';
+    transform: translateX(-25px) rotateZ(0deg);
+  }
+  67.667% {
+    content: '🏐';
+    transform: translateX(-25px) rotateZ(0deg);
+  }
+  83.333% {
+    content: '🏐';
+    transform: translateX(25px) rotateZ(720deg);
+  }
+  100% {
+    content: '🏐';
+    transform: translateX(-25px) rotateZ(0deg);
+  }
+}
+
+/*# sourceMappingURL=three-dots.css.map */
+
+.snippet {
+    position: relative;
+    background: #fff;
+    padding: 2rem 5%;
+    margin: 1.5rem 0;
+    box-shadow: 0 0.4rem 0.8rem -0.1rem rgba(0, 32, 128, .1), 0 0 0 1px #f0f2f7;
+    border-radius: .25rem;
+}
+.stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem 0;
+    margin: 0 -5%;
+    overflow: hidden;
+}
+.dot-collision {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #9880ff;
+    color: #9880ff;
+}
+.filter-contrast {
+    filter: contrast(5);
+    background-color: white;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="row examples">
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-elastic">
+              <div class="stage">
+                <div class="dot-elastic"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-pulse">
+              <div class="stage">
+                <div class="dot-pulse"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-flashing">
+              <div class="stage">
+                <div class="dot-flashing"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-collision">
+              <div class="stage">
+                <div class="dot-collision"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-revolution">
+              <div class="stage">
+                <div class="dot-revolution"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-carousel">
+              <div class="stage">
+                <div class="dot-carousel"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-typing">
+              <div class="stage">
+                <div class="dot-typing"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-windmill">
+              <div class="stage">
+                <div class="dot-windmill"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-bricks">
+              <div class="stage">
+                <div class="dot-bricks"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-floating">
+              <div class="stage">
+                <div class="dot-floating"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-fire">
+              <div class="stage">
+                <div class="dot-fire"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-spin">
+              <div class="stage">
+                <div class="dot-spin"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-falling">
+              <div class="stage">
+                <div class="dot-falling"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-stretching">
+              <div class="stage">
+                <div class="dot-stretching"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row examples">
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-gathering">
+              <div class="stage filter-contrast">
+                <div class="dot-gathering"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-hourglass">
+              <div class="stage filter-contrast">
+                <div class="dot-hourglass"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-overtaking">
+              <div class="stage filter-contrast">
+                <div class="dot-overtaking"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-shuttle">
+              <div class="stage filter-contrast">
+                <div class="dot-shuttle"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-bouncing">
+              <div class="stage">
+                <div class="dot-bouncing"></div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-3">
+            <div class="snippet" data-title=".dot-rolling">
+              <div class="stage">
+                <div class="dot-rolling"></div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+</body>
+</html>
